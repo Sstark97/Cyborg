@@ -1,9 +1,24 @@
 <?php
 
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDOException para poder usarlo en la clase 
+ * GameImgController
+*/
 use PDOException;
 
+/**
+ * Maneja la subida de Imagenes al Servidor
+ * 
+ * Clase que maneja todas las acciones sobre $_FILES
+ * y poder tratar las imágenes de los Videojuegos en el 
+ * Servidor
+ */
 class GameImgController {
     const FILE_TYPES = ["image/png", "image/jpeg"];
     /**

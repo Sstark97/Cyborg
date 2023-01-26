@@ -1,9 +1,23 @@
 <?php
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y PDOException para poder hacer uso de ellos
+*/
 use PDO;
 use PDOException;
 
+/**
+ * Maneja la tabla Videojuegos
+ * 
+ * Clase que maneja la tabla Videojuegos de la BD,
+ * con todos los métodos básicos de un CRUD, además de otras 
+ * funcionalidades como crear un Card para cada Videojuego
+ */
 class GameController {
 
     const GAME_KEYS = ["name", "description", "genre", "price", "assesment", "release_date"];

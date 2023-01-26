@@ -4,8 +4,19 @@
  */
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y Dotenv para poder hacer uso de ellos
+ */
 use PDO;
 use Dotenv;
+
+/**
+ * Cargamos las variables de entorno usando la 
+ * librería Dotenv
+*/
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "\..");
+$dotenv->safeLoad();
 
 /**
  * Maneja la Configuración de la BD
@@ -20,11 +31,10 @@ class ConfigController {
      * Función que devuelve los parámetros de conexión
      * a la base de datos
      * 
+     * @global $_ENV
      * @return array asociativo con las opciones de conexión
      */
     public static function getDbConfig() {
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "\..");
-        $dotenv->safeLoad();
         
         return [
             'db' => [
