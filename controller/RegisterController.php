@@ -22,6 +22,66 @@ class RegisterController {
     const REGISTER_KEYS = ["dni","name","surname", "email", "phone", "age", "password"];
 
     /**
+     * Crea el usuario Administrador en la BD
+     * 
+     * Función que crea el usuario administrador en 
+     * la BD, comprobando si el usuario existe
+     *  
+     * @global $_ENV
+     * @throws PDOException si el usuario existe
+     * @return mixed 
+     */
+    public static function registerAdmin() {
+
+        try {
+            $connection = ConfigController::getDbConnection();
+            [
+                "ADMIN_DNI" => $dni,
+                "ADMIN_NAME" => $name,
+                "ADMIN_SURNAME" => $surname,
+                "ADMIN_EMAIL" => $email,
+                "ADMIN_PHONE" => $phone,
+                "ADMIN_AGE" => $age,
+                "ADMIN_PASS" => $pass,
+            ] = $_ENV;
+
+            if(!UserController::exist($dni)) {
+                $hash_password = password_hash($pass, PASSWORD_BCRYPT, ["salt" => self::SALT, "cost" => 12]);
+
+                $user = [
+                    "dni" => $dni,
+                    "name" => $name,
+                    "surname" => $surname,
+                    "email" => $email,
+                    "phone" => $phone,
+                    "age" => intval($age),
+                    "password" => $hash_password,
+                ];
+    
+                $sql_query = <<< END
+                    INSERT INTO User (dni, name, surname, email, phone, age, password, is_admin) VALUES 
+                    (:dni, :name, :surname, :email, :phone, :age, :password, :is_admin)
+                END;
+    
+                $sentence = $connection->prepare($sql_query);
+    
+                foreach($user as $key => $field) {
+                    $type = $key === "age" ? PDO::PARAM_INT : PDO::PARAM_STR;
+    
+                    $sentence->bindValue(":$key", $field, $type);
+                }
+    
+                $sentence->bindValue(":is_admin", true, PDO::PARAM_BOOL);
+                $sentence->execute();
+            }
+            
+        } catch (PDOException $error) {
+            
+            return GeneralController::createErrors($error->getMessage());
+        }
+    }
+
+    /**
      * Crea un usuario en la BD
      * 
      * Función que crea un usuario en 

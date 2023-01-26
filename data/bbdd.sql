@@ -35,10 +35,6 @@ CREATE TABLE WhisList(
 ALTER TABLE WhisList ADD FOREIGN KEY (dni) REFERENCES User(dni) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE WhisList ADD FOREIGN KEY (gameId) REFERENCES VideoGame(id) ON DELETE CASCADE; 
 
--- Usuario Administrador
-INSERT INTO User (dni, name, surname, email, phone, age, password, is_admin) VALUES
-("12345678A", "admin", "admin", "admin@admin.com", "111111111", 99, "admin1234", true);
-
 -- Datos de ejemplo VIdeojuegos
 INSERT INTO VideoGame (name, description, genre, img, price, assesment, release_date) VALUES 
 ("Persona 5", "Persona 5 es un videojuego de rol desarrollado por Atlus", "JRPG","assets/images/persona-5.jpg",34.95, 4.95, "2016-09-16"),

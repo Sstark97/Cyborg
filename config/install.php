@@ -2,9 +2,7 @@
 require "vendor/autoload.php";
 
 use Controller\ConfigController;
-
-$dotenv = Dotenv\Dotenv:: createImmutable(__DIR__);
-$dotenv->safeLoad();
+use Controller\RegisterController;
 
 $config = ConfigController::getDbConfig();
 
@@ -22,6 +20,7 @@ try {
     $connection = new PDO("mysql:host=$host", "root", "", $options);
     $sql = file_get_contents('data/bbdd.sql');
     $connection->exec($sql);
+    RegisterController::registerAdmin();
     echo "The DataBase and all Table created success";
 } catch (PDOException $error) {
     echo $error->getMessage();
