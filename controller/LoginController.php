@@ -64,13 +64,13 @@ class LoginController {
                 $sanitize_password
             ] = GeneralController::sanitizeFields($_POST["user"]);
 
-            $sql_query = "SELECT dni, password, is_admin FROM User WHERE email = :email";
+            $sql_query = "SELECT dni, password FROM User WHERE email = :email";
 
             $sentence = $connection->prepare($sql_query);
             $sentence->bindValue(":email", $sanitize_email, PDO::PARAM_STR);
 
             $sentence->execute();
-            ["dni" => $dni, "password" => $password, "is_admin" => $admin] = $sentence->fetch();
+            ["dni" => $dni, "password" => $password] = $sentence->fetch();
 
             /**
              * Si el DNI no existe lanzamos una
@@ -80,14 +80,8 @@ class LoginController {
                 throw new PDOException("El usuario no existe");  
             }
 
-            if($admin) {
-                if ($password !== $sanitize_password) {
-                    throw new PDOException("La contraseña no es correcta");
-                }
-            } else {
-                if (!password_verify($sanitize_password, $password)) {
-                    throw new PDOException("La contraseña no es correcta");
-                }
+            if (!password_verify($sanitize_password, $password)) {
+                throw new PDOException("La contraseña no es correcta");
             }
 
             $_SESSION["userId"] = $dni;
