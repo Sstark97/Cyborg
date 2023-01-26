@@ -1,10 +1,10 @@
 <?php
 
   use Controller\UserController;
-  use Controller\WhisListController;
+  use Controller\WhishListController;
 
   $user_data = UserController::get() ?? [];
-  $whishlist_count = count(WhisListController::get()) ?? 0;
+  $whishlist_count = count(WhishListController::get()) ?? 0;
 ?>
 
 <div class="main-profile ">

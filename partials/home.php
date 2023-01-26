@@ -2,14 +2,14 @@
     require_once "vendor/autoload.php";
 
     use Controller\GameController;
-    use Controller\WhislistController;
+    use Controller\WhishListController;
 
     $popular_games = GameController::getPopulars() ?? [];
-    $whish_list = WhisListController::get(3) ?? [];
+    $whish_list = WhishListController::get(3) ?? [];
 ?> 
 
 <?php if(isset($_POST["add_wish_list"])): ?>
-    <?= WhisListController::whishListAction() ?>
+    <?= WhishListController::whishListAction() ?>
 <?php endif; ?>
 
 <!-- ***** Banner Start ***** -->
@@ -65,7 +65,7 @@
         <!-- Renderizamos la lista de deseados -->
         <?php if(count($whish_list) !== 0): ?>
             <?php foreach($whish_list as $game): ?>
-                <?= WhisListController::whishListItem ($game) ?>
+                <?= WhishListController::whishListItem ($game) ?>
             <?php endforeach; ?>
         <?php else: ?>
             <h2 class="text-center pb-5">No hay nada en la lista de Deseados</h2>

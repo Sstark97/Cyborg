@@ -19,7 +19,7 @@ use PDOException;
  * generación de bloques HTML para cada elemento de la 
  * lista de deseados, etc.
  */
-class WhisListController {
+class WhishListController {
     /**
      * Agrega un Videojuego a la lista de deseados
      * 

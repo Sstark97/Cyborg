@@ -3,7 +3,7 @@
 
     use Controller\AuthController;
     use Controller\GameController;
-    use Controller\WhislistController;
+    use Controller\WhishListController;
 
     session_name("videogames");
     session_start();
@@ -15,7 +15,7 @@
 
 <?php include "../partials/header.php" ?>
     <?php if(isset($_POST["add_wish_list"])): ?>
-        <?= WhislistController::whishListAction() ?>
+        <?= WhishListController::whishListAction() ?>
     <?php endif; ?>
 
     <div class="most-popular browse">

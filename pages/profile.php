@@ -2,7 +2,7 @@
     require_once "../vendor/autoload.php";
 
     use Controller\AuthController;
-    use Controller\WhisListController;
+    use Controller\WhishListController;
     use Controller\UserController;
 
     session_name("videogames");
@@ -17,7 +17,7 @@
      */
     $path = strpos($_SERVER["PHP_SELF"], "pages") !== false ? "../" : "";
 
-    $whish_list = WhisListController::get() ?? [];
+    $whish_list = WhishListController::get() ?? [];
 ?>
 
 <?php include "../partials/header.php" ?>
@@ -44,7 +44,7 @@
     <!-- Renderizamos la lista de deseados -->
     <?php if(count($whish_list) !== 0): ?>
         <?php foreach($whish_list as $game): ?>
-            <?= WhisListController::whishListItem ($game) ?>
+            <?= WhishListController::whishListItem ($game) ?>
         <?php endforeach; ?>
     <?php else: ?>
         <h2 class="text-center pb-5">No hay nada en la lista de Deseados</h2>
