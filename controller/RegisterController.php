@@ -110,7 +110,7 @@ class RegisterController {
                 throw new PDOException("El usuario ya existe");
             }
 
-            $hash_password = password_hash($sanitize_password, PASSWORD_BCRYPT, ["salt" => self::SALT, "cost" => 12]);
+            $hash_password = password_hash($sanitize_password, PASSWORD_BCRYPT, ["cost" => 12]);
 
             $user = [
                 "dni" => $sanitize_dni,
