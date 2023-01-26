@@ -18,7 +18,7 @@
 ## Sobre el proyecto
 <p id="about"></p>
 
-![](https://i.imgur.com/N6qiIoB.png)a
+![](https://i.imgur.com/N6qiIoB.png)
 
 Se trata de una tienda online de videojuegos similar a otros proyectos como Steam o Epic Store
 
