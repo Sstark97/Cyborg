@@ -44,19 +44,6 @@
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <!-- <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div> -->
-    <!-- ***** Preloader End ***** -->
-
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -69,13 +56,12 @@
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Search End ***** -->
-                        <!-- <div class="search-input">
+                        <div class="search-input">
                             <form id="search" action="#">
-                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
-                                    onkeypress="handle" />
+                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"/>
                                 <i class="fa fa-search"></i>
                             </form>
-                        </div> -->
+                        </div>
                         <!-- ***** Search End ***** -->
                         <!-- ***** Menu Start ***** -->
 
