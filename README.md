@@ -17,7 +17,8 @@
 
 ## Sobre el proyecto
 <p id="about"></p>
-![Cyborg Shop](https://i.imgur.com/MpCvls5.png)
+
+![](https://i.imgur.com/N6qiIoB.png)a
 
 Se trata de una tienda online de videojuegos similar a otros proyectos como Steam o Epic Store
 
@@ -30,6 +31,7 @@ Aquí encontrarás:
 
 ### Desarrollado con
 <p id="develop"></p>
+
 En esta sección se podrá ver las tecnologías para llevar a cabo el proyecto, tanto el front-end como el back-end.
 
 * ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
@@ -40,10 +42,12 @@ En esta sección se podrá ver las tecnologías para llevar a cabo el proyecto, 
 
 ## Getting Started
 <p id="started"></p>
+
 A continuación veremos una serie de prerequisitos e indicaciones para llevar acabo este proyecto.
 
 ### Prerrequisitos
 <p id="requirements"></p>
+
 Para poder ejecutar este proyecto necesitamos tener instalado:
 
 * PHP 7.4.10 o superior
@@ -56,6 +60,7 @@ Si dispones de un sistema windows puedes descargarte el entorno AMP de [XAMPP](h
 
 ### Instalación
 <p id="installation"></p>
+
 Para instalar el proyecto tenemos que:
 
 1. Clonar el repositorio
@@ -85,6 +90,7 @@ ADMIN_PASS=
 
 ## Vistas
 <p id="views"></p>
+
 En esta sección podremos ver diferentes vistas del usuario.
 
 ### Login
@@ -120,6 +126,7 @@ En está vista el administrador podrá eliminar el videojuego cuyo id pasemos po
 <!-- ROADMAP -->
 ## Roadmap
 <p id="roadmap"></p>
+
 - [x] CRUD Usuarios
 - [x] CRUD Videojuegos
 - [x] CRUD Lista de Deseados
@@ -133,12 +140,14 @@ En está vista el administrador podrá eliminar el videojuego cuyo id pasemos po
 
 ## Licencia
 <p id="licence"></p>
+
 Distribuido bajo la licencia MIT.
 
 <p align="right">(<a href="#readme-top">Regresar arriba</a>)</p>
 
 ## Contacto
 <p id="contact"></p>
+
 Aitor Santana Cabrera - [@aitor_sci](https://mobile.twitter.com/aitorsci) - aitorscinfo@gmail.com
 
 Link en Producción: [Cyborg](https://cyborg-dsw.herokuapp.com/index.php)
