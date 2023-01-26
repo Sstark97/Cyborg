@@ -375,7 +375,7 @@ class GameController {
          * para colocar el icono correspondiente según sea
          * el caso
          */
-        $game_is_in_whish_list = WhisListController::exist($id);
+        $game_is_in_whish_list = WhishListController::exist($id);
         $icon = $game_is_in_whish_list ? "fa-solid" : "fa-regular";
         
         /**
