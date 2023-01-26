@@ -18,7 +18,6 @@ use PDOException;
  * validar los datos de entrada, registrarse, etc
  */
 class RegisterController {
-    private const SALT =  "my_secret_hash_password";
     const REGISTER_KEYS = ["dni","name","surname", "email", "phone", "age", "password"];
 
     /**
@@ -46,7 +45,7 @@ class RegisterController {
             ] = $_ENV;
 
             if(!UserController::exist($dni)) {
-                $hash_password = password_hash($pass, PASSWORD_BCRYPT, ["salt" => self::SALT, "cost" => 12]);
+                $hash_password = password_hash($pass, PASSWORD_BCRYPT, ["cost" => 12]);
 
                 $user = [
                     "dni" => $dni,
