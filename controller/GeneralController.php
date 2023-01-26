@@ -1,6 +1,16 @@
 <?php
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Acciones Generales 
+ * 
+ * Clase que contiene todas las funciones generales que
+ * se manejan en la aplicación, como la redirección a otras
+ * páginas, la generación del nav, etc
+ */
 class GeneralController {
 
     /**
