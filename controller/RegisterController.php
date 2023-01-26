@@ -1,10 +1,22 @@
 <?php
-
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y PDOException para poder hacer uso de ellos
+*/
 use PDO;
 use PDOException;
 
+/**
+ * Maneja todas las acciones de Registro
+ * 
+ * Clase que permite gestionar todas las acciones del registro,
+ * validar los datos de entrada, registrarse, etc
+ */
 class RegisterController {
     private const SALT =  "my_secret_hash_password";
     const REGISTER_KEYS = ["dni","name","surname", "email", "phone", "age", "password"];

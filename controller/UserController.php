@@ -1,17 +1,31 @@
 <?php
-
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y PDOException para poder hacer uso de ellos
+*/
 use PDO;
 use PDOException;
 
+/**
+ * Maneja todas las acciones sobre el Usuario
+ * 
+ * Clase que permite gestionar la tabla del usuario de la BD,
+ * todas las acciones de un CRUD, generación de bloques HTML para
+ * visualizar el perfil, etc.
+ */
 class UserController {
+    // Enlace de Gravatar
     const GRAVATAR_URI = "https://www.gravatar.com/avatar/";
 
-    /** Contenido del Formulario de Eliminar Cuenta */
+    // Contenido del Formulario de Eliminar Cuenta
     const DELETE_CONTENT = "<h4>¿Estás seguro de borrar tu cuenta?</h2><p>Está acción será irreversible</p>";
 
-    /** Claves a revisar del Formulario de Actualización del Perfil */
+    // Claves a revisar del Formulario de Actualización del Perfil
     const PROFILE_KEYS =  ["name","surname", "email", "phone", "age"];
     /**
      * Valida dni y contraseña

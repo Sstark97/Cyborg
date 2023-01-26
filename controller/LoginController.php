@@ -1,10 +1,22 @@
 <?php
-
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y PDOException para poder hacer uso de ellos
+*/
 use PDO;
 use PDOException;
 
+/**
+ * Maneja todas las acciones de Login
+ * 
+ * Clase que permite gestionar todas las acciones del login,
+ * validar los datos de entrada, logearse, etc
+ */
 class LoginController {
     // Claves a comprobar en el Login
     const LOGIN_KEYS = ["email", "password"];

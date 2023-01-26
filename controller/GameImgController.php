@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Espacio de Nombre para todos los controladores
 */

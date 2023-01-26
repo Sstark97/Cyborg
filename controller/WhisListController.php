@@ -1,10 +1,24 @@
 <?php
-
+/**
+ * Espacio de Nombre para todos los controladores
+*/
 namespace Controller;
 
+/**
+ * Añadimos a el espacio de nombre Controller
+ * PDO y PDOException para poder hacer uso de ellos
+*/
 use PDO;
 use PDOException;
 
+/**
+ * Maneja todas las acciones de la lista de deseados
+ * 
+ * Clase que permite gestionar todas las acciones de la
+ * lista de deseados, todas las acciones del CRUD, la 
+ * generación de bloques HTML para cada elemento de la 
+ * lista de deseados, etc.
+ */
 class WhisListController {
     /**
      * Agrega un Videojuego a la lista de deseados
