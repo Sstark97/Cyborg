@@ -64,13 +64,13 @@ class LoginController {
                 $sanitize_password
             ] = GeneralController::sanitizeFields($_POST["user"]);
 
-            $sql_query = "SELECT dni, password FROM User WHERE email = :email";
+            $sql_query = "SELECT dni, password, is_admin FROM User WHERE email = :email";
 
             $sentence = $connection->prepare($sql_query);
             $sentence->bindValue(":email", $sanitize_email, PDO::PARAM_STR);
 
             $sentence->execute();
-            ["dni" => $dni, "password" => $password] = $sentence->fetch();
+            ["dni" => $dni, "password" => $password, "is_admin" => $admin] = $sentence->fetch();
 
             /**
              * Si el DNI no existe lanzamos una
