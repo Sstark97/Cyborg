@@ -2,6 +2,7 @@
 <p id="readme-top"></p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CodeFactor](https://www.codefactor.io/repository/github/sstark97/cyborg/badge)](https://www.codefactor.io/repository/github/sstark97/cyborg)
 
 ## Tabla de Contenidos
 
