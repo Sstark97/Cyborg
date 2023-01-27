@@ -28,7 +28,7 @@ class LoginController {
      * los datos si no están vacíos
      * 
      * @global $_POST
-     * @return string posibles mensaje de error
+     * @return string posible mensaje de error
      */
     private static function validateLoginForm () {
         $message = "";
