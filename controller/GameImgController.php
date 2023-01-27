@@ -93,7 +93,7 @@ class GameImgController {
     /**
      * Subida de una imagen
      * 
-     * Funcioón que se encarga de subir una imagen, comprobando antes
+     * Función que se encarga de subir una imagen, comprobando antes
      * los posibles errores a la hora de subir una imagen
      *
      * @global $_FILES
