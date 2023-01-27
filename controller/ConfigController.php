@@ -50,7 +50,7 @@ class ConfigController {
     }
 
     /**
-     * Conexión con la BD School
+     * Conexión con la BD
      *
      * Función que devuelve la conexión a la BD en base a 
      * las configuraciones definidas en el fichero ./config/config.php.
@@ -58,7 +58,7 @@ class ConfigController {
      * están controlados en las funciones que interactúan con
      * la BD
      *
-     * @return PDO conexión a la BD School
+     * @return PDO conexión a la BD
      */
     public static function getDbConnection()
     {
