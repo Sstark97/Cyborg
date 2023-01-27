@@ -13,7 +13,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\\AuthController\u003A\u003AisLogged\u0028\u0029",
             "name": "isLogged",
-            "summary": "Comprueba\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020logeado",
+            "summary": "Comprueba\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020logueado",
             "url": "classes/Controller-AuthController.html#method_isLogged"
         },                {
             "fqsen": "\\Controller\\AuthController\u003A\u003Alogout\u0028\u0029",
@@ -23,7 +23,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\\AuthController\u003A\u003AisNotLogged\u0028\u0029",
             "name": "isNotLogged",
-            "summary": "Redirecciona\u0020al\u0020login\u0020a\u0020usuarios\u0020sin\u0020logear",
+            "summary": "Redirecciona\u0020al\u0020login\u0020a\u0020usuarios\u0020sin\u0020loguear",
             "url": "classes/Controller-AuthController.html#method_isNotLogged"
         },                {
             "fqsen": "\\Controller\\ConfigController",
@@ -38,7 +38,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\\ConfigController\u003A\u003AgetDbConnection\u0028\u0029",
             "name": "getDbConnection",
-            "summary": "Conexi\u00F3n\u0020con\u0020la\u0020BD\u0020School",
+            "summary": "Conexi\u00F3n\u0020con\u0020la\u0020BD",
             "url": "classes/Controller-ConfigController.html#method_getDbConnection"
         },                {
             "fqsen": "\\Controller\\GameController",
@@ -53,7 +53,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\\GameController\u003A\u003AgetAll\u0028\u0029",
             "name": "getAll",
-            "summary": "Extrae\u0020todos\u0020los\u0020videojugos\u0020existentes",
+            "summary": "Extrae\u0020todos\u0020los\u0020videojuegos\u0020existentes",
             "url": "classes/Controller-GameController.html#method_getAll"
         },                {
             "fqsen": "\\Controller\\GameController\u003A\u003AgetPopulars\u0028\u0029",
