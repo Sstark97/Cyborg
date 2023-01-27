@@ -56,7 +56,7 @@ class GameController {
         return $message;
     }
     /**
-     * Extrae todos los videojugos existentes
+     * Extrae todos los videojuegos existentes
      * 
      * Función que saca todos los elementos
      * de la tabla VideoGame en forma de
