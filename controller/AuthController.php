@@ -16,7 +16,7 @@ class AuthController {
      * Control de administrador 
      * 
      * Control para evitar que entren en esta página 
-     * usuarios no esten logeados como admin
+     * usuarios que no esten logueados como admin
      * 
      * @global $_SESSION
      * @return void
@@ -28,7 +28,7 @@ class AuthController {
     }
 
     /**
-     * Comprueba si el usuario está logeado
+     * Comprueba si el usuario está logueado
      * 
      * Función que te redirige a inicio en
      * caso de que el id del usuario se
@@ -46,7 +46,7 @@ class AuthController {
     /**
      * Cerrar sesión
      * 
-     * Función que destruye la sesión y te redirje
+     * Función que destruye la sesión y te redirije
      * al login
      * 
      *@return void
@@ -58,11 +58,11 @@ class AuthController {
     }
 
     /**
-     * Redirecciona al login a usuarios sin logear
+     * Redirecciona al login a usuarios sin loguear
      * 
-     * Función que te redirige al login en
-     * caso de que el id del usuario se
-     * no encuentre en la sesión
+     * Función que te redirije al login en
+     * caso de que el id del usuario no
+     * se encuentre en la sesión
      * 
      * @global $_SESSION
      * @return void
