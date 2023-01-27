@@ -266,7 +266,7 @@ class UserController {
      * 
      * Función que realiza las comprobaciones sobre los datos
      * recibidos en el formulario y realiza la acción de actualizar los
-     * datos si todo va bien
+     * datos si va bien
      * 
      * @global $_POST
      * @return mixed

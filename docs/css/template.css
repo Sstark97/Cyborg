@@ -105,9 +105,6 @@
     }
 }
 
-.phpdocumentor-table-of-contents {
-}
-
 .phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry {
     margin-bottom: var(--spacing-xxs);
     margin-left: 2rem;

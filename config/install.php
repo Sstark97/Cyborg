@@ -14,7 +14,7 @@ try {
 
     /**
      * Uso root porque en mi casa me daba fallo al crear
-     * la base de datos, para todo lo demás uso la configuración
+     * la base de datos, para lo demás uso la configuración
      * de mi usuario
      */
     $connection = new PDO("mysql:host=$host", "root", "", $options);
