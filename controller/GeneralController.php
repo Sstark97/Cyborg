@@ -16,11 +16,11 @@ class GeneralController {
     /**
      * Redirije a otra ruta
      * 
-     * Función que redirige a la ruta pasada
+     * Función que redirije a la ruta pasada
      * por parámetro y se asegura de que no se 
      * ejecute nada más
      * 
-     * @param string $location ruta a la que queremos dirigir
+     * @param string $location ruta a la que queremos redirijir
      * @return never
     */
     public static function redirect(string $location) {
@@ -54,7 +54,7 @@ class GeneralController {
      * Fragmento HTML con los posibles errores
      * 
      * Función que genera un fragmento de código HTML
-     * que muestro los errores que le pasemops como 
+     * que muestra los errores que le pasemos como 
      * parámetro
      * 
      * @param string $message mensaje de error que queremos mostrar
