@@ -409,10 +409,10 @@ class UserController {
      * Función que genera un fragmento de código HTML con la información
      * del usuario que se encuente en sesión
      * 
-     * @param int $whislist_count Número de elementos en la lista de deseados
+     * @param int $whishlist_count Número de elementos en la lista de deseados
      * @return string Contenido HTML con la información del Perfil
      */
-    public static function profileCard (int $whislist_count) {
+    public static function profileCard (int $whishlist_count) {
         $user_data = self::get();
 
         if(count($user_data) === 0) {
@@ -447,7 +447,7 @@ class UserController {
         </div>
         <div class="col-lg-4 align-self-center">
             <ul>
-                <li>Lista de Deseados<span>$whislist_count</span></li>
+                <li>Lista de Deseados<span>$whishlist_count</span></li>
                 <li>Correo <span>$email</span></li>
                 <li>Edad <span>$age</span></li>
                 <li>Teléfono<span>$phone</span></li>

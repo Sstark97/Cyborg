@@ -20,20 +20,20 @@ CREATE TABLE VideoGame(
     name VARCHAR(75) NOT NULL,
     description VARCHAR(350) NOT NULL,
     genre VARCHAR(50) NOT NULL,
-    img VARCHAR(80),
+    img VARCHAR(80) NOT NULL,
     price DOUBLE NOT NULL,
-    assesment DOUBLE,
-    release_date DATE
+    assesment DOUBLE NOT NULL,
+    release_date DATE NOT NULL
 );
 
-CREATE TABLE WhisList(
+CREATE TABLE WhishList(
     dni VARCHAR(9) NOT NULL,
     gameId INT NOT NULL,
     PRIMARY KEY (dni, gameId)
 );
 
-ALTER TABLE WhisList ADD FOREIGN KEY (dni) REFERENCES User(dni) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE WhisList ADD FOREIGN KEY (gameId) REFERENCES VideoGame(id) ON DELETE CASCADE; 
+ALTER TABLE WhishList ADD FOREIGN KEY (dni) REFERENCES User(dni) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE WhishList ADD FOREIGN KEY (gameId) REFERENCES VideoGame(id) ON DELETE CASCADE; 
 
 -- Datos de ejemplo VIdeojuegos
 INSERT INTO VideoGame (name, description, genre, img, price, assesment, release_date) VALUES 

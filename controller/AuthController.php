@@ -46,7 +46,7 @@ class AuthController {
     /**
      * Cerrar sesión
      * 
-     * Función que destruye la sesión y te redirije
+     * Función que destruye la sesión y te redirige
      * al login
      * 
      *@return void
@@ -60,7 +60,7 @@ class AuthController {
     /**
      * Redirecciona al login a usuarios sin loguear
      * 
-     * Función que te redirije al login en
+     * Función que te redirige al login en
      * caso de que el id del usuario no
      * se encuentre en la sesión
      * 

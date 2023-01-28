@@ -38,7 +38,7 @@ class WhishListController {
             try {
                 $connection = ConfigController::getDbConnection();
 
-                $sql_query = "INSERT INTO WhisList(dni, gameId) VALUES (:dni, :gameId)";
+                $sql_query = "INSERT INTO WhishList(dni, gameId) VALUES (:dni, :gameId)";
         
                 $sentence = $connection->prepare($sql_query);
                 $sentence->bindValue(":dni", $user_id, PDO::PARAM_STR);
@@ -70,7 +70,7 @@ class WhishListController {
             try {
                 $connection = ConfigController::getDbConnection();
 
-                $sql_query = "DELETE FROM WhisList WHERE dni = :dni AND gameId = :gameId";
+                $sql_query = "DELETE FROM WhishList WHERE dni = :dni AND gameId = :gameId";
         
                 $sentence = $connection->prepare($sql_query);
                 $sentence->bindValue(":dni", $user_id, PDO::PARAM_STR);
@@ -101,7 +101,7 @@ class WhishListController {
             try {
                 $connection = ConfigController::getDbConnection();
 
-                $sql_query = "SELECT gameId FROM WhisList WHERE dni = :dni AND gameId = :gameId";
+                $sql_query = "SELECT gameId FROM WhishList WHERE dni = :dni AND gameId = :gameId";
         
                 $sentence = $connection->prepare($sql_query);
                 $sentence->bindValue(":dni", $user_id, PDO::PARAM_STR);
@@ -137,9 +137,9 @@ class WhishListController {
 
                 $sql_query = "
                     SELECT * FROM VideoGame 
-                    INNER JOIN WhisList
-                    ON VideoGame.id = WhisList.gameId 
-                    WHERE WhisList.dni = :dni
+                    INNER JOIN WhishList
+                    ON VideoGame.id = WhishList.gameId 
+                    WHERE WhishList.dni = :dni
                 ";
 
                 $sql_query .= $limit !== 0 ? "LIMIT $limit" : "";

@@ -14,9 +14,9 @@ namespace Controller;
 class GeneralController {
 
     /**
-     * Redirije a otra ruta
+     * Redirige a otra ruta
      * 
-     * Función que redirije a la ruta pasada
+     * Función que redirige a la ruta pasada
      * por parámetro y se asegura de que no se 
      * ejecute nada más
      * 
