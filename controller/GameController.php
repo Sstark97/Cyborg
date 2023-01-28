@@ -40,11 +40,11 @@ class GameController {
         ] = $_POST["game"];
 
         if(!filter_var($price, FILTER_VALIDATE_FLOAT)) {
-            $message .= "<p class='m-0 mb-2'>El precio debe ser un número con dos decimales</p>";
+            $message .= "<p class='m-0 mb-2'>El precio debe ser un número décimal</p>";
         }
         
         if(!filter_var($assesment, FILTER_VALIDATE_FLOAT)) {
-            $message .= "<p class='m-0 mb-2'>La valoración debe ser un número con dos decimales</p>";
+            $message .= "<p class='m-0 mb-2'>La valoración debe ser un número décimal</p>";
         } else if($assesment < 0 || $assesment > 6) {
             $message .= "<p class='m-0 mb-2'>La valoración debe estar entre 0 y 6</p>";
         }
