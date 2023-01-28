@@ -2,8 +2,7 @@
 
   use Controller\UserController;
   use Controller\WhishListController;
-
-  $user_data = UserController::get() ?? [];
+  
   $whishlist_count = count(WhishListController::get()) ?? 0;
 ?>
 
