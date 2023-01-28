@@ -28,6 +28,21 @@ class AuthController {
     }
 
     /**
+     * Control de usuario 
+     * 
+     * Control para evitar que entren en esta página 
+     * usuarios que estén logueados como admin
+     * 
+     * @global $_SESSION
+     * @return void
+    */
+    public static function isNotAdmin () {
+        if (isset($_SESSION["is_admin"])) {
+            GeneralController::redirect("../index.php");
+        }
+    }
+
+    /**
      * Comprueba si el usuario está logueado
      * 
      * Función que te redirige a inicio en

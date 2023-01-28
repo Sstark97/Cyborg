@@ -9,6 +9,7 @@
     session_start();
 
     AuthController::isNotLogged();
+    AuthController::isNotAdmin();
 
     $games = GameController::getAll() ?? [];
 ?>
