@@ -411,7 +411,7 @@ class GameController {
      * Función que crea una tabla HTML con los 
      * videojuegos que existan en la BD
      * 
-     * @return string Frágmento HTML de la Tabla
+     * @return string Fragmento HTML de la Tabla
      */
     public static function createAdminTable () {
         $games = self::getAll();

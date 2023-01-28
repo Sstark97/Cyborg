@@ -143,7 +143,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\\GeneralController\u003A\u003Aredirect\u0028\u0029",
             "name": "redirect",
-            "summary": "Redirije\u0020a\u0020otra\u0020ruta",
+            "summary": "Redirige\u0020a\u0020otra\u0020ruta",
             "url": "classes/Controller-GeneralController.html#method_redirect"
         },                {
             "fqsen": "\\Controller\\GeneralController\u003A\u003ArenderNav\u0028\u0029",

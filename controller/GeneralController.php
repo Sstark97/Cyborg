@@ -58,7 +58,7 @@ class GeneralController {
      * parámetro
      * 
      * @param string $message mensaje de error que queremos mostrar
-     * @param bool $empty controla si debebemos envolver el mensaje en un <span></span>
+     * @param bool $empty controla si debebemos envolver el mensaje en un span
      * @return string fragmento HTML con los errores
      */
     public static function createErrors(string $message, bool $empty = false)

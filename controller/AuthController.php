@@ -9,14 +9,14 @@ namespace Controller;
  * 
  * Clase que maneja las diferentes acciones de autenticación,
  * como son el controlar si un usuario es administrador,
- * comprobar si un usuario está o no logeado y hacer logout.
+ * comprobar si un usuario está o no logueado y hacer logout.
  */
 class AuthController {
     /**
      * Control de administrador 
      * 
      * Control para evitar que entren en esta página 
-     * usuarios que no esten logueados como admin
+     * usuarios que no estén logueados como admin
      * 
      * @global $_SESSION
      * @return void
