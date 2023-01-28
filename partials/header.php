@@ -58,7 +58,7 @@
                         <!-- ***** Search End ***** -->
                         <div class="search-input">
                             <form id="search" action="#">
-                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"/>
+                                <input type="text" placeholder="Escribe algo..." id='searchText' name="searchKeyword"/>
                                 <i class="fa fa-search"></i>
                             </form>
                         </div>
