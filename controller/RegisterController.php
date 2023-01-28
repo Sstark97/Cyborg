@@ -72,6 +72,9 @@ class RegisterController {
     
                 $sentence->bindValue(":is_admin", true, PDO::PARAM_BOOL);
                 $sentence->execute();
+
+                //Cerramos la conexión
+                $connection = null;
             }
             
         } catch (PDOException $error) {
@@ -138,6 +141,9 @@ class RegisterController {
             $sentence->execute();
 
             $_SESSION["userId"] = $sanitize_dni;
+
+            //Cerramos la conexión
+            $connection = null;
             
             GeneralController::redirect("../index.php");
         } catch (PDOException $error) {

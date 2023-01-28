@@ -46,6 +46,9 @@ class WhishListController {
         
                 $sentence->execute();
 
+                //Cerramos la conexión
+                $connection = null;
+
             } catch (PDOException $error) {
                 return GeneralController::createErrors($error->getMessage());
             }
@@ -77,6 +80,9 @@ class WhishListController {
                 $sentence->bindValue(":gameId", $game_id, PDO::PARAM_INT);
         
                 $sentence->execute();
+                
+                //Cerramos la conexión
+                $connection = null;
 
             } catch (PDOException $error) {
                 return GeneralController::createErrors($error->getMessage());
@@ -110,6 +116,9 @@ class WhishListController {
                 $sentence->execute();
 
                 ["gameId" => $game_id] = $sentence->fetch(PDO::FETCH_ASSOC);
+
+                //Cerramos la conexión
+                $connection = null;
 
                 return $game_id == $id;
             } catch (PDOException $error) {
@@ -150,6 +159,9 @@ class WhishListController {
                 $sentence->execute();
 
                 $games_in_whish_list = $sentence->fetchAll(PDO::FETCH_ASSOC);
+
+                //Cerramos la conexión
+                $connection = null;
 
                 return $games_in_whish_list;
             } catch (PDOException $error) {

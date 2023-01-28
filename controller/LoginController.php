@@ -87,6 +87,9 @@ class LoginController {
             $_SESSION["userId"] = $dni;
             $_SESSION["is_admin"] = $admin;
 
+            //Cerramos la conexión
+            $connection = null;
+
             GeneralController::redirect("../index.php");
         } catch (PDOException $error) {
             return GeneralController::createErrors($error->getMessage());

@@ -77,6 +77,9 @@ class GameController {
             $sentence->execute();
             $games = $sentence->fetchAll(PDO::FETCH_ASSOC);
 
+            // Cerramos la conexión
+            $connection = null;
+
             return $games;
         } catch (PDOException $error) {
             return GeneralController::createErrors($error->getMessage());
@@ -105,6 +108,9 @@ class GameController {
 
             $sentence->execute();
             $games = $sentence->fetchAll(PDO::FETCH_ASSOC);
+
+            // Cerramos la conexión
+            $connection = null;
 
             return $games;
         } catch (PDOException $error) {
@@ -136,6 +142,9 @@ class GameController {
             $sentence->execute();
             $game = $sentence->fetch(PDO::FETCH_ASSOC);
 
+            //Cerramios la conexión
+            $connection = null;
+
             return $game;
         } catch (PDOException $error) {
             return GeneralController::createErrors($error->getMessage());
@@ -162,6 +171,9 @@ class GameController {
             $sentence->execute();
 
             ["img" => $img] = $sentence->fetch(PDO::FETCH_ASSOC);
+
+            // Cerramos la conexión
+            $connection = null;
 
             return $img;
             
@@ -219,6 +231,10 @@ class GameController {
             }
 
             $sentence->execute();
+
+            // Cerramos la conexión
+            $connection = null;
+            
             GeneralController::redirect("../index.php");
 
         } catch (PDOException $error) {
@@ -284,6 +300,10 @@ class GameController {
             }
 
             $sentence->execute();
+
+            //Cerramos la conexión
+            $connection = null;
+
             GeneralController::redirect("../index.php");
 
         } catch (PDOException $error) {
@@ -314,6 +334,9 @@ class GameController {
                 $sentence = $connection->prepare($sql_query);
                 $sentence->bindValue(":id", $id, PDO::PARAM_INT);
                 $sentence->execute();
+
+                //Cerramos la conexión
+                $connection = null;
         
                 GeneralController::redirect("../index.php");
         

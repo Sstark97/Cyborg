@@ -114,6 +114,9 @@ class UserController {
             $sentence->execute();
             ["email" => $email ] = $sentence->fetch();
 
+            //Cerramos la conexión
+            $connection = null;
+
             return !empty($email);
         } catch (PDOException $error) {
             
@@ -162,6 +165,9 @@ class UserController {
                 $sentence->execute();
 
                 $user_data = $sentence->fetch(PDO::FETCH_ASSOC);
+
+                //Cerramos la conexión
+                $connection = null;
 
                 return $user_data;
 
@@ -222,6 +228,9 @@ class UserController {
                 $sentence->bindValue(":dni", $user_id, PDO::PARAM_STR);
                 $sentence->execute();
 
+                //Cerramos la conexión
+                $connection = null;
+
                 GeneralController::redirect("../pages/profile.php");
 
             } catch (PDOException $error) {
@@ -253,6 +262,9 @@ class UserController {
                 $sentence->execute();
 
                 session_destroy();
+
+                //Cerramos la conexión
+                $connection = null;
                 GeneralController::redirect("../index.php");
 
             } catch (PDOException $error) {
