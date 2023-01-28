@@ -11,6 +11,11 @@ Search.appendIndex(
             "summary": "Control\u0020de\u0020administrador",
             "url": "classes/Controller-AuthController.html#method_isAdmin"
         },                {
+            "fqsen": "\\Controller\\AuthController\u003A\u003AisNotAdmin\u0028\u0029",
+            "name": "isNotAdmin",
+            "summary": "Control\u0020de\u0020usuario",
+            "url": "classes/Controller-AuthController.html#method_isNotAdmin"
+        },                {
             "fqsen": "\\Controller\\AuthController\u003A\u003AisLogged\u0028\u0029",
             "name": "isLogged",
             "summary": "Comprueba\u0020si\u0020el\u0020usuario\u0020est\u00E1\u0020logueado",

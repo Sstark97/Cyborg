@@ -162,6 +162,13 @@ comprobar si un usuario está o no logueado y hacer logout.</p>
 <dd>Comprueba si el usuario está logueado</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Controller-AuthController.html#method_isNotAdmin">isNotAdmin()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Control de usuario</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Controller-AuthController.html#method_isNotLogged">isNotLogged()</a>
     <span>
                                 &nbsp;: void    </span>
@@ -255,7 +262,7 @@ usuarios que no estén logueados como admin</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="controller/AuthController.php"><a href="files/controller-authcontroller.html"><abbr title="controller/AuthController.php">AuthController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -299,6 +306,57 @@ encuentre en la sesión</p>
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_isNotAdmin">
+        isNotAdmin()
+        <a href="classes/Controller-AuthController.html#method_isNotAdmin" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="controller/AuthController.php"><a href="files/controller-authcontroller.html"><abbr title="controller/AuthController.php">AuthController.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">39</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Control de usuario</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">isNotAdmin</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>Control para evitar que entren en esta página
+usuarios que estén logueados como admin</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Controller-AuthController.html#method_isNotAdmin#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">global</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>$_SESSION</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_isNotLogged">
         isNotLogged()
         <a href="classes/Controller-AuthController.html#method_isNotLogged" class="headerlink"><i class="fas fa-link"></i></a>
@@ -307,7 +365,7 @@ encuentre en la sesión</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="controller/AuthController.php"><a href="files/controller-authcontroller.html"><abbr title="controller/AuthController.php">AuthController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 
     </aside>
 
@@ -359,7 +417,7 @@ se encuentre en la sesión</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="controller/AuthController.php"><a href="files/controller-authcontroller.html"><abbr title="controller/AuthController.php">AuthController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 
     </aside>
 
@@ -495,6 +553,7 @@ al login</p>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Controller-AuthController.html#method_isAdmin">isAdmin()</a></li>
                                             <li><a href="classes/Controller-AuthController.html#method_isLogged">isLogged()</a></li>
+                                            <li><a href="classes/Controller-AuthController.html#method_isNotAdmin">isNotAdmin()</a></li>
                                             <li><a href="classes/Controller-AuthController.html#method_isNotLogged">isNotLogged()</a></li>
                                             <li><a href="classes/Controller-AuthController.html#method_logout">logout()</a></li>
                                     </ul>
