@@ -18,9 +18,11 @@
         <h1 class="text-center">Tienes que pasar un id de Videojuego</h1>
     <?php endif; ?>
     
-    <?php if(!empty($game_id) && count($game) === 0): ?>
+    <?php if(!empty($game_id) && !is_array($game)): ?>
         <h1 class="text-center">No existe el VideoJuego con id <?= $game_id ?></h1>
-    <?php else: ?>
+    <?php endif; ?>
+
+    <?php if(!empty($game_id) && is_array($game)): ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
