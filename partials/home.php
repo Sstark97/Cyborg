@@ -8,7 +8,7 @@
     $whish_list = WhishListController::get(3) ?? [];
 ?> 
 
-<?php if(isset($_POST["add_wish_list"])): ?>
+<?php if(isset($_POST["wish_list_action"])): ?>
     <?= WhishListController::whishListAction() ?>
 <?php endif; ?>
 

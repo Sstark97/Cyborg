@@ -415,7 +415,7 @@ class GameController {
                     <li><i class="fa fa-star"></i>$assesment</li>
                     <li>
                         <form method="post" action="$action" >
-                            <button name="add_wish_list"  class="bg-transparent border border-0"><i class="$icon fa-heart"></i></button>
+                            <button name="wish_list_action"  class="bg-transparent border border-0"><i class="$icon fa-heart"></i></button>
                             <input type="hidden" value="$id" name="gameId" />
                         </form>
                     </li>
