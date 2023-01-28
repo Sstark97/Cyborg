@@ -439,8 +439,15 @@ class UserController {
             "phone" => $phone
         ] = $user_data;
         $gravatar_img = self::generateUserProfileImg($email);
+        $is_admin = isset($_SESSION["is_admin"]) ? $_SESSION["is_admin"] : 0;
+
         $update_modal = self::profileModal("Editar Perfil", "updateUser");
-        $delete_modal = self::profileModal("Borrar Perfil", "deleteUser", true);
+
+        /**
+         * Si es admin no debe poder eliminar su cuenta, ya que no existe forma de 
+         * crear un nuevo usuario administrador
+         */
+        $delete_modal = !$is_admin ? self::profileModal("Borrar Perfil", "deleteUser", true) : "";
         $action = $_SERVER["PHP_SELF"];
 
         return <<< END
