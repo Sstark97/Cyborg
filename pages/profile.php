@@ -18,6 +18,7 @@
     $path = strpos($_SERVER["PHP_SELF"], "pages") !== false ? "../" : "";
 
     $whish_list = WhishListController::get() ?? [];
+    $is_admin = isset($_SESSION["is_admin"]) ? $_SESSION["is_admin"] : 0;
 ?>
 
 <?php include "../partials/header.php" ?>
@@ -35,20 +36,22 @@
 <!-- ***** Banner End ***** -->
 
 <!-- ***** Gaming Library Start ***** -->
-<div class="gaming-library profile-library">
-  <div class="col-lg-12">
-    <div class="heading-section">
-    <h4><em>Tu lista de</em> deseados</h4>
-    </div>
+<?php if(!$is_admin): ?>
+  <div class="gaming-library profile-library">
+    <div class="col-lg-12">
+      <div class="heading-section">
+        <h4><em>Tu lista de</em> deseados</h4>
+      </div>
 
-    <!-- Renderizamos la lista de deseados -->
-    <?php if(count($whish_list) !== 0): ?>
-        <?php foreach($whish_list as $game): ?>
-            <?= WhishListController::whishListItem ($game) ?>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <h2 class="text-center pb-5">No hay nada en la lista de Deseados</h2>
-    <?php endif; ?>
+      <!-- Renderizamos la lista de deseados -->
+      <?php if(count($whish_list) !== 0): ?>
+          <?php foreach($whish_list as $game): ?>
+              <?= WhishListController::whishListItem ($game) ?>
+          <?php endforeach; ?>
+      <?php else: ?>
+          <h2 class="text-center pb-5">No hay nada en la lista de Deseados</h2>
+      <?php endif; ?>
+    </div>
   </div>
-</div>
+<?php endif; ?>
 <?php include "../partials/footer.php" ?>
