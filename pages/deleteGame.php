@@ -19,7 +19,7 @@
 <?php include '../partials/header.php' ?>
 
     <?php if(isset($_POST["submit"])): ?>
-        <?= GameController::delete(); ?>
+        <?= GameController::delete($id); ?>
     <?php endif; ?>
 
     <?php if(isset($game["name"])): ?>

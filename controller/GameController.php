@@ -318,31 +318,28 @@ class GameController {
      * o devuelve un fallo en caso de haberlo
      *
      * @global $_GET
+     * @param $id del videojuego a borrar
      * @return mixed
      */
-    public static function delete () {
-        $id = $_GET["id"] ?? "";
+    public static function delete (int $id) {
+        try {
+            $connection = ConfigController::getDbConnection();
+            $sql_query = "DELETE FROM VideoGame WHERE id = :id";
 
-        if(!empty($id)) {
-            try {
-                $connection = ConfigController::getDbConnection();
-                $sql_query = "DELETE FROM VideoGame WHERE id = :id";
+            // Borramos su imagen
+            GameImgController::deleteGameImg($id);
+    
+            $sentence = $connection->prepare($sql_query);
+            $sentence->bindValue(":id", $id, PDO::PARAM_INT);
+            $sentence->execute();
 
-                // Borramos su imagen
-                GameImgController::deleteGameImg($id);
-        
-                $sentence = $connection->prepare($sql_query);
-                $sentence->bindValue(":id", $id, PDO::PARAM_INT);
-                $sentence->execute();
-
-                //Cerramos la conexión
-                $connection = null;
-        
-                GeneralController::redirect("../index.php");
-        
-            } catch (PDOException $error) {
-                return GeneralController::createErrors($error->getMessage());
-            }
+            //Cerramos la conexión
+            $connection = null;
+    
+            GeneralController::redirect("../index.php");
+    
+        } catch (PDOException $error) {
+            return GeneralController::createErrors($error->getMessage());
         }
     }
 
