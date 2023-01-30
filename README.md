@@ -128,7 +128,7 @@ En está vista el administrador podrá eliminar el videojuego cuyo id pasemos po
 ## Documentación
 <p id="docs"></p>
 
-Para acceder a la documentación técnica del proyecto [aqui](https://cyborg-dsw.herokuapp.com/docs/)
+Puedes acceder a la documentación técnica del proyecto [aqui](https://cyborg-dsw.herokuapp.com/docs/)
 
 <p align="right">(<a href="#readme-top">Regresar arriba</a>)</p>
 
