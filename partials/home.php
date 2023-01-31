@@ -4,8 +4,8 @@
     use Controller\GameController;
     use Controller\WhishListController;
 
-    $popular_games = GameController::getPopulars() ?? [];
-    $whish_list = WhishListController::get(3) ?? [];
+    $popular_games = !is_string(GameController::getPopulars()) ? GameController::getPopulars() : [];
+    $whish_list = !is_string(WhishListController::get(3)) ? WhishListController::get(3) : [];
 ?> 
 
 <?php if(isset($_POST["wish_list_action"])): ?>
