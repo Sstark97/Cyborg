@@ -12,6 +12,7 @@
     - <a href="#requirements">Prerrequisitos</a>
     - <a href="#installation">Instalación</a>
 - <a href="#views">Vistas</a>
+- <a href="#docs">Documentación</a>
 - <a href="#roadmap">Roadmap</a>
 - <a href="#licence">Licencia</a>
 - <a href="#contact">Contacto</a>
@@ -121,6 +122,13 @@ Esta vista es la misma para ambas acciones, en ella el administrador podrá crea
 ### Eliminación de Videojuegos
 En está vista el administrador podrá eliminar el videojuego cuyo id pasemos por GET.
 ![](https://i.imgur.com/pwr0oWj.png)
+
+<p align="right">(<a href="#readme-top">Regresar arriba</a>)</p>
+
+## Documentación
+<p id="docs"></p>
+
+Puedes acceder a la documentación técnica del proyecto [aqui](https://cyborg-dsw.herokuapp.com/docs/)
 
 <p align="right">(<a href="#readme-top">Regresar arriba</a>)</p>
 
