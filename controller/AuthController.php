@@ -37,7 +37,7 @@ class AuthController {
      * @return void
     */
     public static function isNotAdmin () {
-        if (isset($_SESSION["is_admin"])) {
+        if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"]) {
             GeneralController::redirect("../index.php");
         }
     }
