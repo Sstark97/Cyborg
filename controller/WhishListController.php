@@ -128,7 +128,7 @@ class WhishListController {
     }
 
     /**
-     * Devuelve la lista de deseados
+     * Devuelve la lista de deseado
      * 
      * Función que devuelve la lista de videojuegos 
      * deseados de un usuario

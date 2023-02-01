@@ -3,7 +3,7 @@
   use Controller\UserController;
   use Controller\WhishListController;
   
-  $whishlist_count = count(WhishListController::get()) ?? 0;
+  $whishlist_count = !is_string(WhishListController::get()) ? count(WhishListController::get()) : 0;
 ?>
 
 <div class="main-profile ">

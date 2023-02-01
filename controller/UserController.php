@@ -427,7 +427,7 @@ class UserController {
     public static function profileCard (int $whishlist_count) {
         $user_data = self::get();
 
-        if(count($user_data) === 0) {
+        if(is_string($user_data)) {
             return "<h1 class='text-center'>No hay datos de usuario</h1>";
         }
 
