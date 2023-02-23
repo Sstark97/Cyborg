@@ -1,0 +1,24 @@
+version: '3.6'
+services:
+  mysql:
+    image: mariadb:latest #https://hub.docker.com/_/mysql
+    environment:
+      MYSQL_DATABASE: GameShop # esta base de datos será creada al inicio del contenedor
+      MYSQL_USER: aitor97 #se crea al usuario y se asocia a la base de datos anterior
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - ./dbdata:/var/lib/mysql:z
+      - ./sql:/docker-entrypoint-initdb.d:z
+
+  adminer:
+    #indica en la página de login, localhost: mysql
+    image: cyborg-img
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
