@@ -13,5 +13,5 @@ ENV ADMIN_PHONE=111111111
 ENV ADMIN_AGE=99
 ENV ADMIN_PASS=AdminDaw1234
 ENV COMPOSER_ALLOW_SUPERUSER=1
-CMD bash -c "composer install"
+RUN composer install
 RUN composer du
