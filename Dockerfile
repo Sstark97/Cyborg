@@ -18,4 +18,4 @@ RUN apt-get install zip unzip
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN composer install
 RUN composer du
-CMD [ "php", "./config/install.php" ]
+RUN php ./config/install.php
