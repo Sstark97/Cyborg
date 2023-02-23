@@ -13,9 +13,20 @@ services:
     volumes:
       - ./dbdata:/var/lib/mysql:z
       - ./sql:/docker-entrypoint-initdb.d:z
-
   php-app:
     image: cyborg-img
+    environment:
+      DB_HOST: localhost
+      DB_USER: aitor97
+      DB_PASS: 12345
+      DB_NAME: GameShop
+      ADMIN_DNI: 12345678A
+      ADMIN_NAME: admin
+      ADMIN_SURNAME: admin
+      ADMIN_EMAIL: admin@admin.com
+      ADMIN_PHONE: 111111111
+      ADMIN_AGE: 99
+      ADMIN_PASS: AdminDaw1234
     restart: always
     ports:
       - 8080:80
