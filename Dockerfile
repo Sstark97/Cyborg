@@ -15,5 +15,6 @@ ENV ADMIN_PASS=AdminDaw1234
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN apt-get update && apt-get install -y apt-transport-https
 RUN apt-get install zip unzip
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN composer install
 RUN composer du
