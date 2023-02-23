@@ -1,7 +1,7 @@
 FROM php:8.1-apache
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY . /var/www/html
-ENV DB_HOST=localhost
+ENV DB_HOST=mariadb
 ENV DB_USER=aitor97
 ENV DB_PASS=12345
 ENV DB_NAME=GameShop
