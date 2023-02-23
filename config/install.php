@@ -17,8 +17,8 @@ try {
      * la base de datos, para lo demás uso la configuración
      * de mi usuario
      */
-    $connection = new PDO("mysql:host=$host", "root", "root", $options);
-    $sql = file_get_contents('./bbdd.sql');
+    $connection = new PDO("mysql:host=$host", "root", "", $options);
+    $sql = file_get_contents('data/bbdd.sql');
     $connection->exec($sql);
     RegisterController::registerAdmin();
     echo "The DataBase and all Table created success";
