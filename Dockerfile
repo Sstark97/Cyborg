@@ -13,6 +13,7 @@ ENV ADMIN_PHONE=111111111
 ENV ADMIN_AGE=99
 ENV ADMIN_PASS=AdminDaw1234
 ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN apt-get update && apt-get install -y apt-transport-https
 RUN apt-get install zip unzip php-zip
 RUN composer install
 RUN composer du
