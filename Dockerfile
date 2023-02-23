@@ -1,5 +1,5 @@
 FROM php:8.1-apache
-RUN cd ~ && curl -sS https://getcomposer.org/installer -o composer-setup.php && php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY . /var/www/html
 ENV DB_HOST=localhost
 ENV DB_USER=aitor97
