@@ -17,7 +17,7 @@ services:
   php-app:
     image: cyborg-img
     environment:
-      - DB_HOST=localhost
+      - DB_HOST=mariadb
       - DB_USER=aitor97
       - DB_PASS=12345
       - DB_NAME=GameShop
