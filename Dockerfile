@@ -6,4 +6,5 @@ RUN apt-get install zip unzip
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN composer install
 RUN composer du
+WORKDIR /var/www/html
 RUN php ./config/install.php
