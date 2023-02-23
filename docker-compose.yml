@@ -13,6 +13,7 @@ services:
     volumes:
       - ./dbdata:/var/lib/mysql:z
       - ./sql:/docker-entrypoint-initdb.d:z
+
   php-app:
     image: cyborg-img
     environment:
