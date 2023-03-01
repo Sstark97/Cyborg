@@ -1,7 +1,7 @@
 version: '3.6'
 services:
-  mysql:
-    image: mysql:latest
+  mariadb:
+    image: mariadb:latest
     environment:
       MYSQL_DATABASE: GameShop
       MYSQL_USER: aitor97
@@ -17,7 +17,7 @@ services:
   php-app:
     image: cyborg-img
     environment:
-      - DB_HOST=mysql
+      - DB_HOST=mariadb
       - DB_USER=aitor97
       - DB_PASS=12345
       - DB_NAME=GameShop
@@ -33,5 +33,5 @@ services:
       - 8080:80
     volumes:
       - ./ob.ini:/usr/local/etc/php/conf.d/ob.ini
-    links:
-      - mysql:mysql
+    depends_on:
+      - mariadb
