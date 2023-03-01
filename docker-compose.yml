@@ -33,5 +33,5 @@ services:
       - 8080:80
     volumes:
       - ./ob.ini:/usr/local/etc/php/conf.d/ob.ini
-    depends_on:
-      - mysql
+    links:
+      - mysql:mysql
