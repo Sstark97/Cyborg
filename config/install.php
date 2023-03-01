@@ -9,8 +9,6 @@ $config = ConfigController::getDbConfig();
 try {
     [
         "host" => $host,
-        "user" => $user,
-        "pass" => $pass,
         "options" => $options
     ] = $config["db"];
 
@@ -19,7 +17,7 @@ try {
      * la base de datos, para lo demás uso la configuración
      * de mi usuario
      */
-    $connection = new PDO("mysql:host=$host", $user, $pass, $options);
+    $connection = new PDO("mysql:host=$host", "root", "", $options);
     $sql = file_get_contents('data/bbdd.sql');
     $connection->exec($sql);
     RegisterController::registerAdmin();
