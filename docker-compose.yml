@@ -1,12 +1,12 @@
 version: '3.6'
 services:
-  mariadb:
-    image: mariadb:latest
+  mysql:
+    image: mysql:latest
     environment:
-      MARIADB_DATABASE: GameShop
-      MARIADB_USER: aitor97
-      MARIADB_PASSWORD: 12345
-      MARIADB_ROOT_PASSWORD: root
+      MYSQL_DATABASE: GameShop
+      MYSQL_USER: aitor97
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
     restart: always
@@ -17,7 +17,7 @@ services:
   php-app:
     image: cyborg-img
     environment:
-      - DB_HOST=mariadb
+      - DB_HOST=mysql
       - DB_USER=aitor97
       - DB_PASS=12345
       - DB_NAME=GameShop
@@ -34,4 +34,4 @@ services:
     volumes:
       - ./ob.ini:/usr/local/etc/php/conf.d/ob.ini
     depends_on:
-      - mariadb
+      - mysql
